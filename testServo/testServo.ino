@@ -6,7 +6,7 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();//Instantiating objects 
 #define MIN_PULSE_WIDTH 500   //These are the minimum and maximum wavelength values which serve MG 995.
 #define MAX_PULSE_WIDTH 2500
 #define DEFAULT_PULSE_WIDTH 1500
-#define FREQUENCY 60
+#define FREQUENCY 50
  
 int pulseWidth(int angle){ //This function calculates servo's motion angle.
 int pulse_wide, analog_value;
@@ -21,36 +21,73 @@ Serial.begin(9600);
 //Serial.println("16 channel Servo test!");
 pwm.begin();  //Initialize the library and send PWM signals.
 pwm.setPWMFreq(FREQUENCY); //Servo's update frequency at 60 Hertz.
-pwm.setPWM(1,0,pulseWidth(0)); 
-pwm.setPWM(2,0,pulseWidth(0)); 
-pwm.setPWM(3,0,pulseWidth(0)); 
-pwm.setPWM(4,0,pulseWidth(0));
-pwm.setPWM(5,0,pulseWidth(0));
-pwm.setPWM(6,0,pulseWidth(0));
+pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
+pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+pwm.setPWM(3,0,pulseWidth(90)); //SHOULDER_SERVO
+pwm.setPWM(4,0,pulseWidth(0)); //ELBOW_SERVO 
+pwm.setPWM(5,0,pulseWidth(0)); //WRIST_SERVO
+pwm.setPWM(6,0,pulseWidth(=90)); //CRAW_SERVO
 }
  
 void loop(){ 
+// pwm.setPWM(1,0,pulseWidth(60)); // HIP_SERVO 0, RANGE LEFT 0
+// delay(1000);
+// pwm.setPWM(1,0,pulseWidth(180));// HIP_SERVO 0, RANGE LEFT 180
+// delay(1500);
+// pwm.setPWM(1,0,pulseWidth(120));// HIP_SERVO 0, RANGE LEFT 90
+// delay(1000);
+
+// pwm.setPWM(2,0,pulseWidth(0)); // WAIST_SERVO, RANGE LEFT 0
+// delay(5000);
+// pwm.setPWM(2,0,pulseWidth(90));// WAIST_SERVO, RANGE LEFT 180
+// delay(5000);
+// pwm.setPWM(2,0,pulseWidth(180));// WAIST_SERVO, RANGE LEFT 90
+// delay(5000);
+
+pwm.setPWM(6,0,pulseWidth(0)); //Open claw.
+pwm.setPWM(6,0,pulseWidth(120)); //Close claw.
+delay(3000);
+pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
+pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+pwm.setPWM(3,0,pulseWidth(0)); //SHOULDER_SERVO RANGE LEFT 0
+pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
+pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+delay(3000);
+pwm.setPWM(3,0,pulseWidth(90));// SHOULDER_SERVO RANGE LEFT 180
+pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
+pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+delay(3000);
+pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+pwm.setPWM(3,0,pulseWidth(180));// SHOULDER_SERVO RANGE LEFT 90
+pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
+pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+delay(3000);
+
 // pwm.setPWM(6,0,pulseWidth(45));
 // pwm.setPWM(4,0,pulseWidth(0));
 // delay(1000);  
 // pwm.setPWM(3,0,pulseWidth(0));
-pwm.setPWM(1,0,pulseWidth(180));
-delay(5500);
+
 // pwm.setPWM(3,0,pulseWidth(90));
-pwm.setPWM(1,0,pulseWidth(0));
-delay(5000);
-pwm.setPWM(1,0,pulseWidth(90));
- delay(6000);
- pwm.setPWM(1,0,pulseWidth(45));
- delay(2000);
+
+ //pwm.setPWM(1,0,pulseWidth(45));
+ //delay(2000);
 // pwm.setPWM(2,0,pulseWidth(0));
 // pwm.setPWM(6,0,pulseWidth(0));
 // delay(2000);
 }
  
 //TESTING THE ARM.
-//pwm.setPWM(1,0,pulseWidth(0)); //Open claw.
-//pwm.setPWM(1,0,pulseWidth(120)); //Close claw.
+//pwm.setPWM(6,0,pulseWidth(0)); //Open claw.
+//pwm.setPWM(6,0,pulseWidth(120)); //Close claw.
+
+// pwm.setPWM(1,0,pulseWidth(60)); // HIP_SERVO 1, RANGE LEFT 0
+// delay(1000);
+// pwm.setPWM(1,0,pulseWidth(180));// HIP_SERVO 1, RANGE LEFT 180
+// delay(1500);
+// pwm.setPWM(1,0,pulseWidth(120));// HIP_SERVO 1, RANGE LEFT 90
+//  delay(1000);
+
 //pwm.setPWM(2, 0, pulseWidth(90)); //Moving claw's position.
  
 //pwm.setPWM(3,0,pulseWidth(20)); //Low number raise the hand.
