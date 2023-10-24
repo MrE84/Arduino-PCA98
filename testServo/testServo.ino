@@ -26,7 +26,7 @@ pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
 pwm.setPWM(3,0,pulseWidth(90)); //SHOULDER_SERVO
 pwm.setPWM(4,0,pulseWidth(0)); //ELBOW_SERVO 
 pwm.setPWM(5,0,pulseWidth(0)); //WRIST_SERVO
-pwm.setPWM(6,0,pulseWidth(=90)); //CRAW_SERVO
+pwm.setPWM(6,0,pulseWidth(90)); //CRAW_SERVO
 }
  
 void loop(){ 
@@ -50,18 +50,19 @@ delay(3000);
 pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
 pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
 pwm.setPWM(3,0,pulseWidth(0)); //SHOULDER_SERVO RANGE LEFT 0
+pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
 pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
 pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-delay(3000);
+//delay(3000);
 pwm.setPWM(3,0,pulseWidth(90));// SHOULDER_SERVO RANGE LEFT 180
 pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
 pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-delay(3000);
+//delay(3000);
 pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
 pwm.setPWM(3,0,pulseWidth(180));// SHOULDER_SERVO RANGE LEFT 90
 pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
 pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-delay(3000);
+//delay(3000);
 
 // pwm.setPWM(6,0,pulseWidth(45));
 // pwm.setPWM(4,0,pulseWidth(0));
