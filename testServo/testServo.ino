@@ -21,48 +21,65 @@ Serial.begin(9600);
 //Serial.println("16 channel Servo test!");
 pwm.begin();  //Initialize the library and send PWM signals.
 pwm.setPWMFreq(FREQUENCY); //Servo's update frequency at 60 Hertz.
-pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
-pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-pwm.setPWM(3,0,pulseWidth(90)); //SHOULDER_SERVO
-pwm.setPWM(4,0,pulseWidth(0)); //ELBOW_SERVO 
-pwm.setPWM(5,0,pulseWidth(0)); //WRIST_SERVO
-pwm.setPWM(6,0,pulseWidth(90)); //CRAW_SERVO
+// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
+ pwm.setPWM(2,0,pulseWidth(126)); //WAAAIST_SERVO
+ pwm.setPWM(3,0,pulseWidth(85)); //SHOULDER_SERVO
+// pwm.setPWM(4,0,pulseWidth(90)); //ELBOW_SERVO 
+// pwm.setPWM(5,0,pulseWidth(90)); //WRIST_SERVO
+ pwm.setPWM(6,0,pulseWidth(67)); //CRAW_SERVO
 }
  
 void loop(){ 
 // pwm.setPWM(1,0,pulseWidth(60)); // HIP_SERVO 0, RANGE LEFT 0
 // delay(1000);
-// pwm.setPWM(1,0,pulseWidth(180));// HIP_SERVO 0, RANGE LEFT 180
+// pwm.setPWM(1,0,pulseWidth(67));// HIP_SERVO 0, RANGE LEFT 180
 // delay(1500);
-// pwm.setPWM(1,0,pulseWidth(120));// HIP_SERVO 0, RANGE LEFT 90
+// pwm.setPWM(1,0,pulseWidth(125));// HIP_SERVO 0, RANGE LEFT 90
 // delay(1000);
 
-// pwm.setPWM(2,0,pulseWidth(0)); // WAIST_SERVO, RANGE LEFT 0
+// pwm.setPWM(2,0,pulseWidth(60)); // WAIST_SERVO, left
+// delay(2000);
+// pwm.setPWM(2,0,pulseWidth(180));// WAIST_SERVO, right 
+// delay(2000);
+// pwm.setPWM(2,0,pulseWidth(126));// WAIST_SERVO, centre
+// delay(2000);
+
+// pwm.setPWM(3,0,pulseWidth(0)); //SHOULDER_SERVO  left
 // delay(5000);
-// pwm.setPWM(2,0,pulseWidth(90));// WAIST_SERVO, RANGE LEFT 180
+// pwm.setPWM(3,0,pulseWidth(85));// SHOULDER_SERVO center
 // delay(5000);
-// pwm.setPWM(2,0,pulseWidth(180));// WAIST_SERVO, RANGE LEFT 90
+// pwm.setPWM(3,0,pulseWidth(180));// SHOULDER_SERVO right
 // delay(5000);
 
-pwm.setPWM(6,0,pulseWidth(0)); //Open claw.
-pwm.setPWM(6,0,pulseWidth(120)); //Close claw.
-delay(3000);
-pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
-pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-pwm.setPWM(3,0,pulseWidth(0)); //SHOULDER_SERVO RANGE LEFT 0
-pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
-pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-//delay(3000);
-pwm.setPWM(3,0,pulseWidth(90));// SHOULDER_SERVO RANGE LEFT 180
-pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
-pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-//delay(3000);
-pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-pwm.setPWM(3,0,pulseWidth(180));// SHOULDER_SERVO RANGE LEFT 90
-pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
-pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-//delay(3000);
+
+
+
+
+
+
+
+// pwm.setPWM(6,0,pulseWidth(67)); //Open claw.
+// delay(2000);
+// pwm.setPWM(6,0,pulseWidth(125)); //Close claw.
+// delay(3000);
+
+
+// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
+// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+// pwm.setPWM(3,0,pulseWidth(0)); //SHOULDER_SERVO RANGE LEFT 0
+// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
+// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+// delay(2000);
+// pwm.setPWM(3,0,pulseWidth(90));// SHOULDER_SERVO RANGE LEFT 180
+// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
+// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+// delay(2000);
+// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+// pwm.setPWM(3,0,pulseWidth(180));// SHOULDER_SERVO RANGE LEFT 90
+// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
+// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
+// delay(3000);
 
 // pwm.setPWM(6,0,pulseWidth(45));
 // pwm.setPWM(4,0,pulseWidth(0));
@@ -79,8 +96,8 @@ pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
 }
  
 //TESTING THE ARM.
-//pwm.setPWM(6,0,pulseWidth(0)); //Open claw.
-//pwm.setPWM(6,0,pulseWidth(120)); //Close claw.
+//pwm.setPWM(6,0,pulseWidth(67)); //Open claw.
+//pwm.setPWM(6,0,pulseWidth(125)); //Close claw.
 
 // pwm.setPWM(1,0,pulseWidth(60)); // HIP_SERVO 1, RANGE LEFT 0
 // delay(1000);
