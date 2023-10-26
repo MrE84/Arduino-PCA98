@@ -22,11 +22,11 @@ Serial.begin(9600);
 pwm.begin();  //Initialize the library and send PWM signals.
 pwm.setPWMFreq(FREQUENCY); //Servo's update frequency at 60 Hertz.
 // pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
- pwm.setPWM(2,0,pulseWidth(126)); //WAAAIST_SERVO
- pwm.setPWM(3,0,pulseWidth(85)); //SHOULDER_SERVO
-// pwm.setPWM(4,0,pulseWidth(90)); //ELBOW_SERVO 
-// pwm.setPWM(5,0,pulseWidth(90)); //WRIST_SERVO
- pwm.setPWM(6,0,pulseWidth(67)); //CRAW_SERVO
+pwm.setPWM(2,0,pulseWidth(126)); //WAAAIST_SERVO
+pwm.setPWM(3,0,pulseWidth(85)); //SHOULDER_SERVO
+pwm.setPWM(4,0,pulseWidth(90)); //ELBOW_SERVO 
+pwm.setPWM(5,0,pulseWidth(0)); //WRIST_SERVO
+pwm.setPWM(6,0,pulseWidth(67)); //CRAW_SERVO
 }
  
 void loop(){ 
@@ -51,11 +51,19 @@ void loop(){
 // pwm.setPWM(3,0,pulseWidth(180));// SHOULDER_SERVO right
 // delay(5000);
 
+// pwm.setPWM(4,0,pulseWidth(0)); //ELBOW_SERVO right
+// delay(5000);
+// pwm.setPWM(4,0,pulseWidth(90)); //ELBOW_SERVO centre
+// delay(2000);
+// pwm.setPWM(4,0,pulseWidth(180)); //ELBOW_SERVO left
+// delay(5000);
 
-
-
-
-
+pwm.setPWM(5,0,pulseWidth(0)); //WRIST_SERVO flat center
+delay(5000);
+pwm.setPWM(5,0,pulseWidth(90)); //WRIST_SERVO vertical
+delay(2000);
+pwm.setPWM(5,0,pulseWidth(180)); //WRIST_SERVO 180 rotation
+delay(5000);
 
 
 // pwm.setPWM(6,0,pulseWidth(67)); //Open claw.
