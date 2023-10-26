@@ -58,12 +58,12 @@ void loop(){
 // pwm.setPWM(4,0,pulseWidth(180)); //ELBOW_SERVO left
 // delay(5000);
 
-pwm.setPWM(5,0,pulseWidth(0)); //WRIST_SERVO flat center
-delay(5000);
-pwm.setPWM(5,0,pulseWidth(90)); //WRIST_SERVO vertical
-delay(2000);
-pwm.setPWM(5,0,pulseWidth(180)); //WRIST_SERVO 180 rotation
-delay(5000);
+// pwm.setPWM(5,0,pulseWidth(0)); //WRIST_SERVO flat center
+// delay(5000);
+// pwm.setPWM(5,0,pulseWidth(90)); //WRIST_SERVO vertical
+// delay(2000);
+// pwm.setPWM(5,0,pulseWidth(180)); //WRIST_SERVO 180 rotation
+// delay(5000);
 
 
 // pwm.setPWM(6,0,pulseWidth(67)); //Open claw.
@@ -71,53 +71,5 @@ delay(5000);
 // pwm.setPWM(6,0,pulseWidth(125)); //Close claw.
 // delay(3000);
 
-
-// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1,
-// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-// pwm.setPWM(3,0,pulseWidth(0)); //SHOULDER_SERVO RANGE LEFT 0
-// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
-// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-// delay(2000);
-// pwm.setPWM(3,0,pulseWidth(90));// SHOULDER_SERVO RANGE LEFT 180
-// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
-// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-// delay(2000);
-// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-// pwm.setPWM(3,0,pulseWidth(180));// SHOULDER_SERVO RANGE LEFT 90
-// pwm.setPWM(1,0,pulseWidth(120)); //HIP_SERVO 1
-// pwm.setPWM(2,0,pulseWidth(90)); //WAAAIST_SERVO
-// delay(3000);
-
-// pwm.setPWM(6,0,pulseWidth(45));
-// pwm.setPWM(4,0,pulseWidth(0));
-// delay(1000);  
-// pwm.setPWM(3,0,pulseWidth(0));
-
-// pwm.setPWM(3,0,pulseWidth(90));
-
- //pwm.setPWM(1,0,pulseWidth(45));
- //delay(2000);
-// pwm.setPWM(2,0,pulseWidth(0));
-// pwm.setPWM(6,0,pulseWidth(0));
-// delay(2000);
 }
  
-//TESTING THE ARM.
-//pwm.setPWM(6,0,pulseWidth(67)); //Open claw.
-//pwm.setPWM(6,0,pulseWidth(125)); //Close claw.
-
-// pwm.setPWM(1,0,pulseWidth(60)); // HIP_SERVO 1, RANGE LEFT 0
-// delay(1000);
-// pwm.setPWM(1,0,pulseWidth(180));// HIP_SERVO 1, RANGE LEFT 180
-// delay(1500);
-// pwm.setPWM(1,0,pulseWidth(120));// HIP_SERVO 1, RANGE LEFT 90
-//  delay(1000);
-
-//pwm.setPWM(2, 0, pulseWidth(90)); //Moving claw's position.
- 
-//pwm.setPWM(3,0,pulseWidth(20)); //Low number raise the hand.
-//pwm.setPWM(3,0,pulseWidth(0)); //High number put down the hand.
- 
-//pwm.setPWM(4, 0, pulseWidth(180));//High number put down the elbow.
-//pwm.setPWM(4, 0, pulseWidth(70));
